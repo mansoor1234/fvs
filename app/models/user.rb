@@ -5,4 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   belongs_to :role, optional: true
+  has_many :provinces
+  #mount_uploader :fingerprint, FingerprintUploader
+
+  
 end

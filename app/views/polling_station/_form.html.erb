@@ -1,0 +1,37 @@
+<%= form_with(model: polling_station) do |form| %>
+  <% if polling_station.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(polling_station.errors.count, "error") %> prohibited this polling station from being saved:</h2>
+
+      <ul>
+        <% polling_station.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :UC %>
+    <%= form.text_field :UC %>
+  </div>
+
+  <div class="field">
+    <%= form.label :voter_id %>
+      <%= form.collection_select :voter_id, Voter.order(:name),:id,:name, include_blank: true %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

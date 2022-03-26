@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
+  resources :voters
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
+  get 'home/about'
+  root "home#index"
+  resources :candidates
+  resources :caste_votes
   get 'district/index'
   get 'district/show'
   get 'district/update'
@@ -12,14 +18,8 @@ Rails.application.routes.draw do
   get 'province/show'
   get 'province/update'
   get 'province/delete'
-  get 'polling_station/index'
-  get 'polling_station/show'
-  get 'polling_station/update'
-  get 'polling_station/delete'
+  resources :polling_station
   devise_for :users, skip: :registrations
-
-  get 'home/about'
-  root "home#index"
 end
 
   

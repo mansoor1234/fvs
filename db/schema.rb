@@ -10,10 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_17_162549) do
+ActiveRecord::Schema.define(version: 2022_03_08_204804) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "candidates", force: :cascade do |t|
+    t.string "name"
+    t.string "cnic"
+    t.string "polling_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "caste_votes", force: :cascade do |t|
+    t.integer "polling_id"
+    t.integer "candidate_id"
+    t.integer "voter_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "constituencies", force: :cascade do |t|
     t.string "name"
@@ -36,6 +52,7 @@ ActiveRecord::Schema.define(version: 2022_01_17_162549) do
     t.integer "UC"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "voter_id"
   end
 
   create_table "provinces", force: :cascade do |t|
@@ -73,6 +90,14 @@ ActiveRecord::Schema.define(version: 2022_01_17_162549) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["role_id"], name: "index_users_on_role_id"
+  end
+
+  create_table "voters", force: :cascade do |t|
+    t.string "name"
+    t.integer "cnic"
+    t.string "fingerprint"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end

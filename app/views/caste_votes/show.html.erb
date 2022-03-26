@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Polling:</strong>
+  <%= @caste_vote.polling_id %>
+</p>
+
+<p>
+  <strong>Candidate:</strong>
+  <%= @caste_vote.candidate_id %>
+</p>
+
+<p>
+  <strong>Voter:</strong>
+  <%= @caste_vote.voter_id %>
+</p>
+
+<%= link_to 'Edit', edit_caste_vote_path(@caste_vote) %> |
+<%= link_to 'Back', caste_votes_path %>

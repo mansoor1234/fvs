@@ -1,0 +1,35 @@
+.bg-indigo-600, .bg-indigo-700 {
+  background: #2e944a !important;
+}
+.text-indigo-600 {
+  color: #2e944a !important;
+}
+.text-indigo-100{
+  color: #fff !important;
+}
+.bg-indigo-800{
+  background: #036420 !important;
+}
+.hover\:bg-indigo-600:hover {
+  background: #036420 !important;
+}
+.rounder-logo {
+  max-width: 100px;
+}
+.text-indigo-300 {
+  color: #ffffff !important;
+}
+input {
+  padding: 10px 40px 10px 8px;
+  border: 1px solid;
+  max-width: 60% !important;
+}
+select {
+  padding: 10px 40px 10px 4px;
+  border: 1px solid;
+  max-width: 60% !important;
+}
+.img-icon-s {
+  width: 30px !important;
+  margin-right: 10px;
+}
