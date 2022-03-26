@@ -1,3 +1,4 @@
 class PollingStation < ApplicationRecord
-	belongs_to :constituency
+	has_many :candidates
+	has_many :voters
 end

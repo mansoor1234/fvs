@@ -1,0 +1,84 @@
+  <div class="hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0">
+      <!-- Sidebar component, swap this element with another sidebar if you like -->
+      <div class="flex flex-col flex-grow pt-5 bg-indigo-700 overflow-y-auto">
+        <div class="flex items-center justify-center flex-shrink-0 px-4">
+          <img class=" rounder-logo" src="img/white-logo.png" alt="Workflow">
+        </div>
+        <div class="mt-5 flex-1 flex flex-col">
+          <nav class="flex-1 px-2 pb-4 space-y-1">
+            <!-- Current: "bg-indigo-800 text-white", Default: "text-indigo-100 hover:bg-indigo-600" -->
+            <a href="add-manager.html" class="bg-indigo-800 text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+              <!-- Heroicon name: outline/home -->
+             <img src="img/icons8-manager-32.png"  class="max-w-sm " style="margin-right: 8px;">
+              Add Manager
+            </a>
+            <a href="add-candidate.html" class="hover:bg-indigo-600 text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                <!-- Heroicon name: outline/home -->
+                <img src="img/icons8-candidate-32.png"  class="max-w-sm img-icon-s">
+                </svg>
+                Add Candidate
+              </a>
+  
+            <a href="add-staff.html" class="text-indigo-100 hover:bg-indigo-600 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+              <!-- Heroicon name: outline/users -->
+              <img src="img/icons8-ballot-32.png"  class="max-w-sm img-icon-s">
+              Add Staff
+            </a>
+  
+            <a href="add-voter.html" class="text-indigo-100 hover:bg-indigo-600 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+              <!-- Heroicon name: outline/folder -->
+              <img src="img/icons8-fingerprint-32.png"  class="max-w-sm img-icon-s">
+              
+              </svg>
+              Add Voter
+            </a>
+  
+            <a href="add-pooling-station.html" class="text-indigo-100 hover:bg-indigo-600 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+              <!-- Heroicon name: outline/calendar -->
+              <img src="img/icons8-elections-32.png"  class="max-w-sm img-icon-s">
+              Add Polling Station
+            </a>
+  
+            <a href="#" class="text-indigo-100 hover:bg-indigo-600 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+              <!-- Heroicon name: outline/inbox -->
+              <img src="img/icons8-test-results-32.png"  class="max-w-sm img-icon-s">
+              View Results
+            </a>
+  
+            <a href="#" class="text-indigo-100 hover:bg-indigo-600 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+              <!-- Heroicon name: outline/chart-bar -->
+              <img src="img/icons8-downloads-32.png"  class="max-w-sm img-icon-s">
+              Downloads
+            </a>
+            
+            <a href="#" class="text-indigo-100 hover:bg-indigo-600 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                <!-- Heroicon name: outline/chart-bar -->
+                <img src="img/icons8-validation-32.png"  class="max-w-sm img-icon-s">
+                Verify prototal
+              </a>
+              <a href="add-manager.html" class="hover:bg-indigo-600 text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                <!-- Heroicon name: outline/home -->
+               <img src="img/icons8-manager-32.png"  class="max-w-sm " style="margin-right: 8px;">
+                Add Technical
+              </a>
+              <a href="<%= home_about_path %>" class="hover:bg-indigo-600 text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                <!-- Heroicon name: outline/home -->
+               <img src="img/icons8-manager-32.png"  class="max-w-sm " style="margin-right: 8px;">
+                About us
+              </a>
+              <% if user_signed_in? %>
+               <a href="<%= destroy_user_session_path %>" class="hover:bg-indigo-600 text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                <!-- Heroicon name: outline/home -->
+               <img src="img/icons8-manager-32.png"  class="max-w-sm " style="margin-right: 8px;">
+                Sign Out
+              </a>
+              <%else%>
+              <a href="<%= new_user_session_path %>" class="hover:bg-indigo-600 text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md" %>
+                <!-- Heroicon name: outline/home -->
+               <img src="img/icons8-manager-32.png"  class="max-w-sm " style="margin-right: 8px;">
+               Sign in
+              <%end%>
+          </nav>
+        </div>
+      </div>
+    </div>

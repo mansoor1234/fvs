@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Caste Votes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Polling</th>
+      <th>Candidate</th>
+      <th>Voter</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @caste_votes.each do |caste_vote| %>
+      <tr>
+        <td><%= caste_vote.polling_id %></td>
+        <td><%= caste_vote.candidate_id %></td>
+        <td><%= caste_vote.voter_id %></td>
+        <td><%= link_to 'Show', caste_vote %></td>
+        <td><%= link_to 'Edit', edit_caste_vote_path(caste_vote) %></td>
+        <td><%= link_to 'Destroy', caste_vote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Caste Vote', new_caste_vote_path %>
